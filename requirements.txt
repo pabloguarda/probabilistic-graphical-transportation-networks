@@ -5,3 +5,6 @@ Pillow
 pandas
 sns
 scikit-learn
+tensorflow
+tensorflow_datasets
+tensorflow_probability
