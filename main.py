@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, './src')
+
 from dbn import *
 from rbm import *
 # import dbn
