@@ -1,5 +1,6 @@
-# ProbabilisticGraphicalTransportationNetworks
- 10708 Course Project
+# Probabilistic Graphical Transportation Networks
+
+This is the final project of the course 10-708 Probablistic Graphical Models at Carnegie Mellon University. It studies the use of Restricted Boltzmann Machines and Deep Belief Network to estimate Origin-Destination matrices. The analysis are performed using synthetic data and it has `TensorFlow` as one of the main dependencies.
 
 ## Development setup
 
