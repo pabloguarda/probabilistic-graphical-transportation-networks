@@ -670,11 +670,11 @@ od_pred_train = rbm_1.sample_h(train_X)[0]
 # Confusion matrix
 Q_binary = (Q>0.1).astype(int)
 
-y_actu = Q_binary[:train_idx, :].flatten()
+y_actu = Q_binary[:train_idxs, :].flatten()
 y_pred = od_pred_train.flatten()
 confusion_matrix(y_actu, y_pred)
 
-y_actu = pd.Series(list(Q_binary[:train_idx, :].flatten()), name='Actual')
+y_actu = pd.Series(list(Q_binary[:train_idxs, :].flatten()), name='Actual')
 y_pred = pd.Series(list(od_pred_train.flatten()), name='Predicted')
 df_confusion_rbm = pd.crosstab(y_actu, y_pred)
 df_confusion_rbm = df_confusion_rbm/ df_confusion_rbm.sum(axis=1)
@@ -754,7 +754,7 @@ heatmap_OD(od_pred_train_dbn[0].reshape((24,24)),filepath = 'figures/dbn/OD_heat
 
 
 # Confusion matrix
-y_actu = pd.Series(list(Q_binary[:train_idx, :].flatten()), name='Actual')
+y_actu = pd.Series(list(Q_binary[:train_idxs, :].flatten()), name='Actual')
 y_pred = pd.Series(list(od_pred_train_dbn.flatten()), name='Predicted')
 df_confusion_dbn = pd.crosstab(y_actu, y_pred)
 df_confusion_dbn = pd.crosstab(y_actu, y_pred) / df_confusion_dbn.sum(axis=1)
